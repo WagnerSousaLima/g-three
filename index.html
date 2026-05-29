@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aula 3 | Marca Pessoal e Criação Digital</title>
+  <style>
+    :root {
+      --bg: #f5f1e8;
+      --ink: #101827;
+      --muted: #596273;
+      --paper: #fffdf7;
+      --line: #d8cfbf;
+      --green: #006b5b;
+      --blue: #2258b7;
+      --gold: #bd7414;
+      --red: #b44840;
+      --violet: #6548b2;
+      --mint: #def0e8;
+      --sky: #e4eefc;
+      --sun: #fbead0;
+      --rose: #f6dfda;
+      --lilac: #ebe4fa;
+      --dark: #111827;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      overflow: hidden;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(16, 24, 39, .055) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(16, 24, 39, .055) 1px, transparent 1px),
+        var(--bg);
+      background-size: 32px 32px;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+    }
+    .deck { width: 100vw; height: 100vh; position: relative; }
+    .slide {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      padding: 2.1rem 3rem 2.45rem;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      gap: 1rem;
+      overflow: hidden;
+    }
+    .slide.active { display: grid; }
+    header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.1rem; }
+    .eyebrow {
+      color: var(--green);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: .55rem;
+    }
+    h1, h2, h3, p { margin: 0; }
+    h1 {
+      max-width: 1080px;
+      font-size: 4.45rem;
+      line-height: .96;
+      letter-spacing: 0;
+      overflow-wrap: anywhere;
+    }
+    h2 {
+      max-width: 1000px;
+      font-size: 3rem;
+      line-height: 1.04;
+      letter-spacing: 0;
+      overflow-wrap: anywhere;
+    }
+    .subtitle {
+      max-width: 900px;
+      color: #354257;
+      font-size: 1.14rem;
+      line-height: 1.34;
+      margin-top: .78rem;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 247, .96);
+      color: #263449;
+      font-weight: 900;
+      padding: .52rem .78rem;
+      white-space: nowrap;
+    }
+    .badge::before {
+      content: "";
+      width: .55rem;
+      height: .55rem;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    .content { min-height: 0; align-self: center; overflow: hidden; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .grid.wide-left { grid-template-columns: 1.1fr .9fr; }
+    .flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .72rem; }
+    .card, .panel, .screen, .lab {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 253, 247, .96);
+      box-shadow: 0 12px 30px rgba(16, 24, 39, .08);
+      overflow: hidden;
+    }
+    .card { min-height: 126px; padding: .95rem; }
+    .panel { padding: 1.05rem; min-height: 100%; }
+    .lab { padding: 1rem; background: #fffaf0; border-color: #d8bd85; }
+    .mint { background: var(--mint); border-color: #b8d9cd; }
+    .sky { background: var(--sky); border-color: #c0d2f1; }
+    .sun { background: var(--sun); border-color: #e8ca92; }
+    .rose { background: var(--rose); border-color: #e6bab3; }
+    .lilac { background: var(--lilac); border-color: #d5c8f0; }
+    .dark { background: var(--dark); border-color: var(--dark); color: #f8fafc; }
+    .dark strong { color: #fff; }
+    .dark p, .dark li { color: #d7dee9; }
+    strong { display: block; color: #132033; font-size: 1.02rem; margin-bottom: .42rem; }
+    .dark strong { color: #fff; }
+    .card p, .panel p, .lab p, li { color: #465466; font-size: .94rem; line-height: 1.32; }
+    ul, ol { margin: .56rem 0 0; padding-left: 1.08rem; }
+    li + li { margin-top: .3rem; }
+    .number { color: var(--green); font-size: 2.05rem; font-weight: 950; line-height: .95; margin-bottom: .58rem; }
+    .pill {
+      display: inline-flex;
+      border: 1px solid #cabd9e;
+      border-radius: 999px;
+      background: rgba(255, 253, 247, .96);
+      color: #213044;
+      font-size: .82rem;
+      font-weight: 900;
+      padding: .34rem .55rem;
+      margin: .1rem .08rem .1rem 0;
+    }
+    .profile {
+      display: grid;
+      grid-template-rows: 120px 1fr;
+      min-height: 360px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 16px 36px rgba(16,24,39,.1);
+    }
+    .cover {
+      background:
+        linear-gradient(135deg, rgba(34,88,183,.16), rgba(0,107,91,.18)),
+        repeating-linear-gradient(90deg, rgba(17,24,39,.08) 0 1px, transparent 1px 28px);
+      border-bottom: 1px solid var(--line);
+    }
+    .profile-body { padding: 0 1rem 1rem; }
+    .avatar {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      border: 5px solid var(--paper);
+      background: linear-gradient(135deg, #20304a, #006b5b);
+      margin-top: -46px;
+      margin-bottom: .55rem;
+    }
+    .profile-line { height: 10px; border-radius: 999px; background: #e1d8c8; margin: .4rem 0; }
+    .profile-line.short { width: 48%; }
+    .profile-line.mid { width: 68%; }
+    .mock-post {
+      min-height: 300px;
+      display: grid;
+      grid-template-rows: 58px 1fr 54px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      overflow: hidden;
+    }
+    .post-head, .post-foot { padding: .78rem; border-bottom: 1px solid var(--line); }
+    .post-foot { border-bottom: 0; border-top: 1px solid var(--line); color: var(--muted); }
+    .post-visual {
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 950;
+      background:
+        linear-gradient(135deg, #111827 0%, #2258b7 55%, #006b5b 100%);
+    }
+    code { font-family: Consolas, "Courier New", monospace; color: #132033; }
+    .lab code { display: block; white-space: pre-wrap; font-size: .9rem; line-height: 1.33; overflow-wrap: anywhere; }
+    .mini-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      color: #667085;
+      font-size: .82rem;
+    }
+    .progress-wrap { display: flex; align-items: center; gap: .65rem; }
+    .progress { width: 170px; height: 8px; border-radius: 999px; background: #e0d7c8; overflow: hidden; }
+    .progress span { display: block; height: 100%; background: var(--green); }
+    .nav { position: fixed; right: 1rem; bottom: 1rem; display: flex; gap: .45rem; z-index: 50; }
+    button {
+      width: 42px;
+      height: 42px;
+      border: 1px solid #bcb2a3;
+      background: rgba(255,253,247,.96);
+      color: #213044;
+      border-radius: 8px;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(17,24,39,.12);
+    }
+    @media (max-width: 900px) {
+      body { overflow: auto; overflow-x: hidden; }
+      .deck, .slide { width: 100%; height: auto; min-height: 100vh; }
+      .slide { padding: 1.25rem; overflow: visible; }
+      header { flex-direction: column; }
+      h1 { font-size: 2.12rem; line-height: 1.02; }
+      h2 { font-size: 1.52rem; line-height: 1.1; }
+      .subtitle { font-size: 1rem; }
+      .grid, .grid.two, .grid.four, .grid.wide-left, .flow { grid-template-columns: 1fr; }
+      .slide > *, .card, .panel, .lab, .content, .screen { min-width: 0; max-width: 100%; }
+      .nav { display: none; }
+    }
+    @media (max-width: 520px) {
+      header, .content, .mini-footer { max-width: 340px; }
+      h1 { font-size: 1.86rem; }
+      h2 { font-size: 1.28rem; }
+      .card p, .panel p, .lab p, li { font-size: .88rem; }
+      .lab code { font-size: .78rem; }
+      .progress { width: 70px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck">
+    <section class="slide active">
+      <header>
+        <div>
+          <div class="eyebrow">Informática 5.0 | Aula 3</div>
+          <h1>Marca Pessoal, Imagem e Redes Sociais Para Negócios</h1>
+          <p class="subtitle">Criação digital com Canva, IA visual, LinkedIn e conteúdo para transformar presença na internet em oportunidade.</p>
+        </div>
+        <div class="badge">19h às 21h</div>
+      </header>
+      <div class="content grid">
+        <div class="card rose"><strong>Ponte da Aula 2</strong><p>Ferramentas digitais viram valor quando organizam uma entrega clara.</p></div>
+        <div class="card mint"><strong>Marca pessoal</strong><p>Como ser encontrado, lembrado e entendido na internet.</p></div>
+        <div class="card sky"><strong>Criação visual</strong><p>Foto, banner, post, apresentação e vídeo com ferramentas atuais.</p></div>
+      </div>
+      <footer class="mini-footer"><span>Hoje a entrega é um kit de presença digital profissional</span><span></span></footer>
+    </section>
+
+    <section class="slide">
+      <header>
+        <div>
+          <div class="eyebrow">Conceito central</div>
+          <h2>Marca pessoal é a lembrança que a internet constrói sobre você</h2>
+        </div>
+        <div class="badge">Posicionamento</div>
+      </header>
+      <div class="content grid">
+        <div class="card mint"><strong>Quem você ajuda?</strong><p>Público, nicho, comunidade, mercado ou tipo de cliente.</p></div>
+        <div class="card sky"><strong>Com o quê?</strong><p>Habilidade, serviço, conhecimento, solução ou transformação.</p></div>
+        <div class="card sun"><strong>Com que prova?</strong><p>Projetos, posts, antes/depois, depoimentos, currículo ou portfólio.</p></div>
+      </div>
+      <footer class="mini-footer"><span>Ser visto é bom. Ser entendido é melhor.</span><span></span></footer>
+    </section>
+
+    <section class="slide">
+      <header>
+        <div>
+          <div class="eyebrow">Mapa da presença digital</div>
+          <h2>Seu perfil precisa responder em poucos segundos</h2>
+        </div>
+        <div class="badge">Clareza</div>
+      </header>
+      <div class="content grid wide-left">
+        <div class="profile">
+          <div class="cover"></div>
+          <div class="profile-body">
+            <div class="avatar"></div>
+            <div class="profile-line short"></div>
+            <div class="profile-line mid"></div>
+            <div class="profile-line"></div>
+            <p class="subtitle" style="font-size:.95rem;margin-top:.8rem;">Foto + banner + headline + sobre + prova + contato</p>
+          </div>
+        </div>
+        <div class="panel">
+          <strong>Checklist de leitura rápida</strong>
+          <ul>
+            <li>Quem é essa pessoa?</li>
+            <li>O que ela faz ou quer fazer?</li>
+            <li>Por que alguém deveria confiar?</li>
+            <li>Qual é o próximo passo?</li>
+          </ul>
+        </div>
+      </div>
+      <footer class="mini-footer"><span>Perfil profissional é página de apresentação, não álbum pessoal</span><span></span></footer>
+    </section>
+
+    <section class="slide">
+      <header>
+        <div>
+          <div class="eyebrow">LinkedIn na prática</div>
+          <h2>Configuração mínima para parecer profissional</h2>
+        </div>
+        <div class="badge">Perfil</div>
+      </header>
+      <div class="content flow">
+        <div class="card mint"><strong>Foto</strong><p>Rosto nítido, boa luz, fundo simples e expressão natural.</p></div>
+        <div class="card sky"><strong>Banner</strong><p>Área visual com promessa, área de atuação ou palavra-chave.</p></div>
+        <div class="card sun"><strong>Headline</strong><p>Não só cargo: habilidade, objetivo e área de valor.</p></div>
+        <div class="card rose"><strong>Sobre</strong><p>Texto curto: trajetória, interesse, habilidades e convite.</p></div>
+        <div class="card lilac"><strong>Destaques</strong><p>Projetos, posts, portfólio, certificado ou apresentação.</p></div>
+      </div>
+      <footer class="mini-footer"><span>O perfil bom reduz dúvida e aumenta oportunidade</span><span></span></footer>
+    </section>
+
+    <section class="slide">
+      <header>
+        <div>
+          <div class="eyebrow">IA visual</div>
+          <h2>Foto e banner: usar IA sem perder autenticidade</h2>
+        </div>
+        <div class="badge">Nano Banana</div>
+      </header>
+      <div class="content grid">
+        <div class="card mint"><strong>Foto profissional</strong><p>IA pode melhorar luz, fundo e enquadramento. O rosto precisa continuar reconhecível.</p></div>
+        <div class="card sky"><strong>Banner</strong><p>Use IA visual para criar fundos, composição, textura e cenário ligado ao seu nicho.</p></div>
+        <div class="card sun"><strong>Cuidados</strong><p>Evite exagero, rosto artificial, texto ilegível, promessa falsa e imagem que pareça fantasia.</p></div>
+      </div>
+      <footer class="mini-footer"><span>Nano Banana ou ferramenta equivalente: bom para edição guiada por texto e consistência visual</span><span></span></footer>
+    </section>
+
+    <section class="slide">
+      <header>
+        <div>
+          <div class="eyebrow">Canva como estúdio</div>
+          <h2>Design básico é escolha: cor, fonte, espaço e repetição</h2>
+        </div>
+        <div class="badge">Criação</div>
+      </header>
+      <div class="content grid">
+        <div class="card mint"><strong>Identidade</strong><p>2 cores principais, 1 fonte de título, 1 fonte de texto e estilo de imagem.</p></div>
+        <div class="card sky"><strong>Templates</strong><p>Modelo para post, carrossel, banner, currículo visual e apresentação.</p></div>
+        <div class="card sun"><strong>IA no Canva</strong><p>Use para gerar ideias, layout inicial, imagens, textos, vídeos curtos e variações.</p></div>
+      </div>
+      <footer class="mini-footer"><span>Design bom não é enfeite: é entendimento rápido</span><span></span></footer>
+    </section>
+
+    <section class="slide">
+      <header>
+        <div>
+          <div class="eyebrow">Conteúdo para redes</div>
+          <h2>Post bom tem função, não só aparência</h2>
+        </div>
+        <div class="badge">Estratégia</div>
+      </header>
+      <div class="content grid four">
+        <div class="card mint"><strong>Ensinar</strong><p>Dica, tutorial, passo a passo, erro comum.</p></div>
+        <div class="card sky"><strong>Provar</strong><p>Antes/depois, bastidor, resultado, depoimento.</p></div>
+        <div class="card sun"><strong>Conectar</strong><p>História curta, opinião, aprendizado, desafio.</p></div>
+        <div class="card rose"><strong>Converter</strong><p>Convite, agenda, formulário, contato, serviço.</p></div>
+      </div>
+      <footer class="mini-footer"><span>Marca pessoal cresce quando conteúdo mostra valor de forma repetida</span><span></span></footer>
+    </section>
+
+    <section class="slide">
+      <header>
+        <div>
+          <div class="eyebrow">Imagem, vídeo e formato</div>
+          <h2>Uma ideia pode virar vários conteúdos</h2>
+        </div>
+        <div class="badge">Multiplicar</div>
+      </header>
+      <div class="content grid">
+        <div class="mock-post">
+          <div class="post-head"><strong>Post estático</strong></div>
+          <div class="post-visual">DICA</div>
+          <div class="post-foot">Imagem clara + legenda objetiva</div>
+        </div>
+        <div class="mock-post">
+          <div class="post-head"><strong>Carrossel</strong></div>
+          <div class="post-visual">1 / 5</div>
+          <div class="post-foot">Sequência para ensinar ou vender ideia</div>
+        </div>
+        <div class="mock-post">
+          <div class="post-head"><strong>Vídeo curto</strong></div>
+          <div class="post-visual">▶</div>
+          <div class="post-foot">Roteiro simples + fala + chamada final</div>
+        </div>
+      </div>
+      <footer class="mini-footer"><span>Não crie mais do zero: reaproveite ideias em formatos diferentes</span><span></span></footer>
+    </section>
+
+    <section class="slide">
+      <header>
+        <div>
+          <div class="eyebrow">Projeto da aula</div>
+          <h2>Kit de Marca Pessoal na Internet</h2>
+          <p class="subtitle">Criar uma primeira versão de perfil profissional e conteúdo visual para LinkedIn ou rede social de negócio.</p>
+        </div>
+        <div class="badge">Mão na massa</div>
+      </header>
+      <div class="content flow">
+        <div class="card mint"><strong>1. Posicionamento</strong><p>Quem sou, o que faço, quem ajudo e qual oportunidade busco.</p></div>
+        <div class="card sky"><strong>2. Foto/Banner</strong><p>Melhorar foto e criar conceito de banner com IA visual.</p></div>
+        <div class="card sun"><strong>3. LinkedIn</strong><p>Escrever headline, sobre curto e destaques.</p></div>
+        <div class="card rose"><strong>4. Post</strong><p>Criar um post ou carrossel com Canva.</p></div>
+        <div class="card lilac"><strong>5. Pitch</strong><p>Apresentar o kit e explicar a marca pessoal.</p></div>
+      </div>
+      <footer class="mini-footer"><span>Projeto pequeno, mas com cara de presença digital real</span><span></span></footer>
+    </section>
+
+    <section class="slide">
+      <header>
+        <div>
+          <div class="eyebrow">Prompt de apoio</div>
+          <h2>Use IA para organizar sua marca, não para inventar uma pessoa</h2>
+        </div>
+        <div class="badge">IA</div>
+      </header>
+      <div class="content lab">
+        <code>Estou construindo minha marca pessoal na internet.
+Minha área/interesse é: [área].
+Quero ser lembrado por: [habilidade, serviço ou objetivo].
+Meu público é: [empregador, cliente, comunidade ou nicho].
+
+Crie:
+1. uma headline para LinkedIn;
+2. um texto "sobre" com até 5 linhas;
+3. uma ideia de banner profissional;
+4. um post de apresentação;
+5. uma melhoria para deixar minha presença mais confiável.
+
+Critério: linguagem simples, profissional e verdadeira.</code>
+      </div>
+      <footer class="mini-footer"><span>IA ajuda a dar forma. A verdade da marca vem da pessoa.</span><span></span></footer>
+    </section>
+
+    <section class="slide">
+      <header>
+        <div>
+          <div class="eyebrow">Apresentação final</div>
+          <h2>Mostre sua presença digital em 45 segundos</h2>
+        </div>
+        <div class="badge">Pitch</div>
+      </header>
+      <div class="content grid">
+        <div class="card mint"><strong>Quem sou</strong><p>Área, interesse, habilidade ou objetivo profissional.</p></div>
+        <div class="card sky"><strong>Como apareço</strong><p>Foto, banner, headline e estilo visual escolhido.</p></div>
+        <div class="card sun"><strong>O que publico</strong><p>Post, carrossel, vídeo curto ou conteúdo de prova.</p></div>
+      </div>
+      <footer class="mini-footer"><span>Marca pessoal é clareza repetida com consistência</span><span></span></footer>
+    </section>
+
+    <section class="slide">
+      <header>
+        <div>
+          <div class="eyebrow">Fechamento</div>
+          <h2>Criar imagem é criar confiança</h2>
+          <p class="subtitle">Canva, IA visual, LinkedIn e redes sociais viram oportunidade quando ajudam uma pessoa ou negócio a ser entendido, lembrado e procurado.</p>
+        </div>
+        <div class="badge">21h00</div>
+      </header>
+      <div class="content grid">
+        <div class="card mint"><strong>Habilidade</strong><p>Edição, comunicação visual, texto, vídeo e apresentação.</p></div>
+        <div class="card sky"><strong>Serviço</strong><p>Perfil profissional, kit visual, posts, banners e conteúdo para negócios locais.</p></div>
+        <div class="card sun"><strong>Próximo passo</strong><p>Transformar esse kit em portfólio e oferta de serviço.</p></div>
+      </div>
+      <footer class="mini-footer"><span>Informática 5.0: tecnologia, criatividade e empreendedorismo</span><span></span></footer>
+    </section>
+  </main>
+  <div class="nav">
+    <button id="prev" aria-label="Slide anterior">‹</button>
+    <button id="next" aria-label="Próximo slide">›</button>
+  </div>
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    let current = 0;
+    function updateProgress() {
+      slides.forEach((slide, index) => {
+        const footer = slide.querySelector('.mini-footer');
+        if (!footer) return;
+        const existing = footer.querySelector('.progress-wrap');
+        if (existing) existing.remove();
+        const wrap = document.createElement('span');
+        wrap.className = 'progress-wrap';
+        const label = document.createElement('span');
+        label.textContent = `${index + 1}/${slides.length}`;
+        const bar = document.createElement('span');
+        bar.className = 'progress';
+        const fill = document.createElement('span');
+        fill.style.width = `${((index + 1) / slides.length) * 100}%`;
+        bar.appendChild(fill);
+        wrap.appendChild(label);
+        wrap.appendChild(bar);
+        footer.appendChild(wrap);
+      });
+    }
+    function showSlide(index) {
+      current = Math.max(0, Math.min(index, slides.length - 1));
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
+      window.location.hash = `slide-${current + 1}`;
+    }
+    document.getElementById('next').addEventListener('click', () => showSlide(current + 1));
+    document.getElementById('prev').addEventListener('click', () => showSlide(current - 1));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight' || event.key === 'PageDown') showSlide(current + 1);
+      if (event.key === 'ArrowLeft' || event.key === 'PageUp') showSlide(current - 1);
+      if (event.key.toLowerCase() === 'p') window.print();
+      if (event.key.toLowerCase() === 'f') {
+        if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+        else document.exitFullscreen();
+      }
+    });
+    updateProgress();
+    const hashMatch = window.location.hash.match(/slide-(\d+)/);
+    if (hashMatch) showSlide(Number(hashMatch[1]) - 1);
+  </script>
+</body>
+</html>
