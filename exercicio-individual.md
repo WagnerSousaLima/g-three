@@ -1,132 +1,148 @@
-# Exercício individual - Kit de Marca Pessoal na Internet
+# Exercício individual - Kit de Marca Pessoal com LinkedIn e IA
 
 ## Missão
 
-Criar uma primeira versão de presença profissional para internet usando LinkedIn, Canva e IA.
+Configurar ou rascunhar uma presença profissional usando:
+
+- LinkedIn;
+- GPT ou Gemini para texto;
+- Nano Banana/Gemini para foto e banner;
+- um post ou destaque profissional.
 
 ## Parte 1 - Posicionamento
 
-Preencha:
+Preencha antes de usar IA:
 
 ```text
 Minha área/interesse:
 Quero ser lembrado por:
 Posso ajudar pessoas com:
-Uma prova, experiência ou projeto meu:
+Tenho como prova:
 Meu público principal:
 ```
 
 ## Parte 2 - LinkedIn
 
-Crie ou rascunhe:
+Abra seu LinkedIn e verifique:
 
-1. headline;
-2. texto “sobre” com até 5 linhas;
-3. ideia de banner;
-4. lista de 3 destaques possíveis.
+- foto;
+- banner;
+- headline;
+- sobre;
+- experiência;
+- competências;
+- destaques;
+- contato.
 
-Modelo de headline:
+Se não tiver LinkedIn, rascunhe tudo neste exercício para criar depois.
+
+## Parte 3 - GPT/Gemini para headline e sobre
+
+Use este prompt:
 
 ```text
-[Área/interesse] | [habilidade principal] | [objetivo ou público]
+Estou configurando meu LinkedIn.
+Minha área/interesse é: [área].
+Quero ser lembrado por: [habilidade ou objetivo].
+Tenho experiência/prova em: [prova].
+Meu público é: [empregador, cliente ou comunidade].
+
+Crie:
+1. três opções de headline;
+2. um texto "sobre" com até 5 linhas;
+3. um post de apresentação profissional;
+4. uma sugestão de destaque para meu perfil.
+
+Critério: linguagem simples, profissional e verdadeira.
+Não invente experiências.
 ```
 
-Exemplo:
+Depois, revise:
 
 ```text
-Tecnologia e Atendimento Digital | Organização com Google Workspace | Apoio pequenos negócios
+Deixe a versão mais natural, menos exagerada e mais parecida com alguém em início de carreira.
 ```
 
-## Parte 3 - Foto e banner com IA visual
+## Parte 4 - Nano Banana/Gemini para foto
 
-Use Nano Banana ou uma ferramenta equivalente de IA visual para planejar:
-
-- melhoria de foto profissional;
-- fundo limpo;
-- banner de LinkedIn;
-- imagem de divulgação.
-
-Prompt para foto:
+Prompt para melhorar foto:
 
 ```text
 Melhore esta foto para uso profissional no LinkedIn.
 Mantenha meu rosto reconhecível.
-Melhore luz, fundo e enquadramento.
+Melhore iluminação, fundo e enquadramento.
 Estilo: natural, profissional, confiável, sem exagero.
+Não altere minha identidade.
 ```
+
+Checklist da foto:
+
+- rosto visível;
+- boa luz;
+- fundo limpo;
+- aparência natural;
+- sem excesso de filtro.
+
+## Parte 5 - Nano Banana/Gemini para banner
 
 Prompt para banner:
 
 ```text
-Crie um conceito de banner profissional para LinkedIn.
+Crie um banner horizontal para LinkedIn.
 Área: [área].
-Mensagem principal: [frase].
+Mensagem curta: [frase].
+Estilo: limpo, moderno, profissional.
 Cores: [cores].
-Estilo: limpo, moderno, confiável, com espaço para texto.
+Deixe espaço livre para texto.
+Evite excesso de elementos.
 ```
 
-## Parte 4 - Post no Canva
+Ideias de mensagem:
 
-Escolha um formato:
+- Tecnologia aplicada para pequenos negócios.
+- Organização digital e atendimento profissional.
+- Aprendendo tecnologia para criar soluções reais.
+- Comunicação, imagem e ferramentas digitais.
 
-- post estático;
-- carrossel;
-- mini apresentação;
-- roteiro de vídeo curto.
+## Parte 6 - Aplicar ou rascunhar
 
-Escolha uma função:
+Entrega mínima:
 
-- ensinar;
-- provar;
-- conectar;
-- converter.
+1. headline escolhida;
+2. texto sobre;
+3. prompt de foto;
+4. prompt de banner;
+5. post de apresentação;
+6. próximo passo no LinkedIn.
 
-Estrutura simples:
+## Post de apresentação
+
+Modelo:
 
 ```text
-Tema:
-Público:
-Mensagem principal:
-Título do post:
-Texto curto:
-Chamada final:
+Estou desenvolvendo minha presença profissional na internet.
+Tenho estudado [tema/área] e quero atuar com [objetivo].
+Nesta etapa, estou aprendendo a usar [ferramentas] para criar soluções mais profissionais.
+Meu próximo passo é [ação].
 ```
 
-## Prompt de apoio
+## Apresentação final
 
-```text
-Estou construindo minha marca pessoal na internet.
-Minha área/interesse é: [área].
-Quero ser lembrado por: [habilidade, serviço ou objetivo].
-Meu público é: [empregador, cliente, comunidade ou nicho].
-
-Crie:
-1. uma headline para LinkedIn;
-2. um texto "sobre" com até 5 linhas;
-3. uma ideia de banner profissional;
-4. um post de apresentação;
-5. uma melhoria para deixar minha presença mais confiável.
-
-Critério: linguagem simples, profissional e verdadeira.
-```
-
-## Entrega final
-
-Apresente em 45 segundos:
+Fale em 45 segundos:
 
 ```text
 Minha marca pessoal quer comunicar:
-Meu perfil mostra isso por:
+Minha headline ficou:
 Meu visual escolhido foi:
-Meu conteúdo será sobre:
-Meu próximo passo é:
+Meu primeiro conteúdo será:
+Meu próximo passo no LinkedIn:
 ```
 
 ## Checklist
 
-- Tenho uma frase clara de posicionamento.
-- Minha headline não é genérica.
-- Meu “sobre” é curto e verdadeiro.
-- Minha ideia de banner comunica área ou objetivo.
-- Meu post tem função.
-- Minha imagem parece profissional sem parecer artificial.
+- Minha headline é clara.
+- Meu sobre é verdadeiro e curto.
+- Minha foto parece profissional sem parecer artificial.
+- Meu banner comunica área ou objetivo.
+- Meu post mostra aprendizado, prova ou intenção.
+- Meu perfil tem próximo passo.

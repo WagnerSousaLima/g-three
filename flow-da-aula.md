@@ -1,76 +1,92 @@
-# Flow da Aula 3 - Marca Pessoal, Imagem e Redes Sociais Para Negócios
+# Flow da Aula 3 - Marca Pessoal com LinkedIn, Nano Banana, Gemini e GPT
 
 **Horário:** 19h às 21h  
-**Tema:** criação digital, marca pessoal, IA visual, Canva, LinkedIn e conteúdo para redes.  
-**Produto da aula:** Kit de Marca Pessoal na Internet.
+**Tema:** marca pessoal, configuração de LinkedIn, IA textual e IA visual.  
+**Produto da aula:** LinkedIn configurado ou rascunhado + kit visual de marca pessoal.
 
 ## Intenção pedagógica
 
-A aula mostra que imagem digital não é vaidade: é comunicação, confiança e oportunidade.
+Esta aula é uma oficina de presença profissional. O aluno não deve apenas “aprender sobre redes sociais”; ele deve sair com uma versão melhor do próprio perfil e entender como IA pode ajudar sem inventar uma identidade falsa.
 
-O aluno deve entender que foto, banner, headline, post e vídeo curto são peças de uma presença profissional. O foco é construir uma marca pessoal simples, verdadeira e utilizável em LinkedIn, Instagram profissional ou redes de negócio.
+A lógica da aula:
+
+```text
+posicionamento -> LinkedIn -> GPT/Gemini -> Nano Banana -> aplicação no perfil -> apresentação
+```
 
 ## Resultado esperado
 
-Ao final, cada aluno terá rascunhado ou criado:
+Ao final, cada aluno terá:
 
-- posicionamento pessoal;
-- ideia de foto profissional;
-- conceito de banner;
-- headline para LinkedIn;
+- frase de posicionamento;
+- LinkedIn aberto, revisado ou rascunhado;
+- headline com apoio de GPT/Gemini;
 - texto “sobre” curto;
-- post ou carrossel no Canva;
-- pitch de 45 segundos.
+- prompt de foto profissional;
+- prompt de banner com Nano Banana/Gemini;
+- ideia de post ou destaque profissional;
+- pitch de 45 segundos sobre sua marca pessoal.
 
-## 19h00 - 19h08 | Abertura
+## 19h00 - 19h08 | Abertura: presença digital vira oportunidade
 
 **Slide:** 1  
-**Objetivo:** conectar com a aula anterior.
+**Objetivo:** conectar a aula com trabalho real.
 
 Fala sugerida:
 
-> Na aula passada, vimos ferramentas digitais como forma de criar trabalho real. Hoje vamos cuidar de como esse trabalho aparece para o mundo: imagem, perfil, conteúdo e marca pessoal.
+> Na aula anterior, falamos de ferramentas para criar entregas. Hoje vamos cuidar de como essa entrega aparece para o mundo: perfil, foto, banner, texto e prova.
 
 Perguntas rápidas:
 
-- O que uma pessoa entende sobre você quando vê seu perfil?
-- Seu perfil hoje ajuda ou atrapalha uma oportunidade?
+- Se alguém procurar seu nome hoje, o que vai entender?
+- Seu perfil ajuda uma pessoa a confiar em você?
 
-## 19h08 - 19h20 | Marca pessoal
+## 19h08 - 19h20 | Marca pessoal sem personagem
 
 **Slide:** 2  
-**Objetivo:** explicar marca pessoal como clareza, não fama.
+**Objetivo:** explicar que marca pessoal é clareza e confiança.
 
-Explique:
-
-- marca pessoal é lembrança;
-- marca pessoal precisa de verdade;
-- não é inventar personagem;
-- é deixar claro quem você ajuda, com o quê e com que prova.
-
-Atividade curta:
+Atividade rápida:
 
 ```text
-Eu quero ser lembrado por:
-Eu posso ajudar pessoas com:
-Uma prova ou exemplo meu é:
+Quero ser lembrado por:
+Quero atuar em:
+Posso ajudar com:
+Tenho como prova:
 ```
 
-## 19h20 - 19h35 | Perfil profissional e LinkedIn
+Condução:
+
+- evite que o aluno escreva frases genéricas como “sou comunicativo”;
+- puxe para habilidade, área, interesse ou objetivo concreto;
+- deixe claro que marca pessoal precisa ser verdadeira.
+
+## 19h20 - 19h38 | Abrir e ler o LinkedIn com a turma
 
 **Slides:** 3 e 4  
-**Objetivo:** mostrar estrutura de perfil.
+**Objetivo:** configurar o perfil como objeto real da aula.
 
-Conduza pela lógica:
+Passos em sala:
 
-1. foto;
-2. banner;
-3. headline;
-4. sobre;
-5. destaques;
-6. contato.
+1. Alunos acessam o LinkedIn.
+2. Quem não tiver conta pode rascunhar no exercício individual.
+3. Professor mostra onde editar:
+   - foto;
+   - banner;
+   - headline;
+   - sobre;
+   - destaques;
+   - experiência;
+   - competências.
 
-Mostre que LinkedIn não é só currículo: é vitrine, prova e conversa profissional.
+Checklist no projetor:
+
+```text
+Consigo entender quem é?
+Consigo entender o que faz ou quer fazer?
+Existe alguma prova?
+Existe próximo passo?
+```
 
 Para iniciantes:
 
@@ -78,138 +94,169 @@ Para iniciantes:
 
 Para intermediários:
 
-- incluir banner, destaques, links e primeiro post.
+- ajustar banner, destaques, link personalizado e primeiro post.
 
-## 19h35 - 19h50 | Foto e banner com IA visual
+## 19h38 - 19h55 | Nano Banana/Gemini para foto e banner
 
 **Slide:** 5  
-**Objetivo:** ensinar uso responsável de IA visual.
+**Objetivo:** usar IA visual com critério profissional.
 
 Explique:
 
-- Nano Banana ou ferramenta equivalente pode ajudar a melhorar foto, fundo, composição e banner;
-- o rosto deve continuar natural e reconhecível;
-- o banner deve comunicar área, serviço ou objetivo;
-- evitar imagem exagerada, artificial ou enganosa.
+- Nano Banana é útil para edição guiada por texto, foto e banner;
+- Gemini também pode ajudar a criar ideias visuais e prompts;
+- a foto precisa continuar reconhecível;
+- o banner deve comunicar área, objetivo ou serviço;
+- a imagem deve parecer profissional, não fantasiosa.
 
-Prompt exemplo para foto:
+Demonstração:
+
+1. Mostre uma foto comum ou exemplo neutro.
+2. Crie prompt de melhoria.
+3. Crie prompt de banner.
+4. Compare: o que ficou profissional? o que ficou exagerado?
+
+Prompt para foto:
 
 ```text
 Melhore esta foto para uso profissional no LinkedIn.
-Mantenha meu rosto reconhecível, melhore luz, fundo e enquadramento.
-Estilo: profissional, natural, confiável, sem exagero.
+Mantenha meu rosto reconhecível.
+Melhore luz, fundo e enquadramento.
+Estilo: natural, profissional, confiável, sem exagero.
 ```
 
-Prompt exemplo para banner:
+Prompt para banner:
 
 ```text
-Crie um conceito de banner para LinkedIn de uma pessoa que quer trabalhar com [área].
-Visual limpo, profissional, com espaço para texto curto.
-Cores: [cores].
-Mensagem principal: [frase].
+Crie um banner horizontal para LinkedIn.
+Área: [área].
+Mensagem curta: [frase].
+Estilo: limpo, moderno, profissional.
+Deixe espaço livre para texto e evite excesso de elementos.
 ```
 
-## 19h50 - 20h05 | Canva como estúdio de criação
+## 19h55 - 20h12 | GPT/Gemini para headline, sobre e post
 
 **Slide:** 6  
-**Objetivo:** apresentar design básico.
+**Objetivo:** usar IA textual para clareza.
 
-Ensine quatro princípios simples:
+Mostre que GPT/Gemini podem ajudar em três camadas:
 
-- contraste;
-- alinhamento;
-- repetição;
-- espaço.
+- clarear posicionamento;
+- gerar opções de headline;
+- escrever sobre curto e post de apresentação.
 
-Mostre no Canva:
+Prompt base:
 
-- escolher template;
-- trocar cores;
-- trocar fontes;
-- inserir foto;
-- criar variações;
-- exportar imagem.
+```text
+Estou configurando meu LinkedIn.
+Minha área/interesse é: [área].
+Quero ser lembrado por: [habilidade ou objetivo].
+Tenho experiência/prova em: [prova].
+Meu público é: [empregador, cliente ou comunidade].
 
-## 20h05 - 20h22 | Conteúdo para redes
+Crie 3 opções de headline, um texto sobre com até 5 linhas e um post de apresentação.
+Linguagem simples, profissional e verdadeira.
+```
 
-**Slides:** 7 e 8  
-**Objetivo:** mostrar que conteúdo precisa de função.
+Oriente:
 
-Explique os quatro tipos:
+- o aluno escolhe, edita e adapta;
+- não copiar resposta da IA sem ler;
+- cortar exageros e promessas irreais.
+
+## 20h12 - 20h25 | Conteúdo que prova valor
+
+**Slide:** 7  
+**Objetivo:** mostrar que perfil precisa de prova.
+
+Explique os quatro tipos de conteúdo:
 
 - ensinar;
 - provar;
 - conectar;
 - converter.
 
-Mostre como a mesma ideia vira:
+Exemplos para LinkedIn:
 
-- post estático;
-- carrossel;
-- vídeo curto.
+- “O que aprendi criando meu primeiro kit digital”;
+- “Antes e depois da minha headline”;
+- “3 ferramentas que estou aprendendo para trabalhar melhor”;
+- “Meu primeiro projeto no curso Informática 5.0”.
 
-Exemplo:
+## 20h25 - 20h35 | Configuração guiada do LinkedIn
 
-```text
-Tema: Como organizar perfil profissional no LinkedIn
-Post: 3 erros comuns
-Carrossel: passo a passo do perfil
-Vídeo: antes e depois de uma headline
-```
-
-## 20h22 - 20h50 | Projeto: Kit de Marca Pessoal
-
-**Slides:** 9 e 10  
-**Objetivo:** produzir o kit.
+**Slide:** 8  
+**Objetivo:** aplicar no perfil.
 
 Passos:
 
-1. Definir área/interesse.
-2. Escrever posicionamento.
-3. Gerar headline e “sobre” com IA.
-4. Criar conceito de foto/banner.
-5. Criar post ou carrossel no Canva.
-6. Preparar pitch de 45 segundos.
+1. Ajustar ou escolher foto.
+2. Criar ou escolher banner.
+3. Colar headline revisada.
+4. Colar sobre revisado.
+5. Criar post/destaque ou rascunho.
+
+Para quem não tem LinkedIn:
+
+- preencher a ficha do exercício;
+- criar o kit em Docs;
+- abrir LinkedIn depois com tudo pronto.
+
+## 20h35 - 20h52 | Projeto: Kit de Marca Pessoal
+
+**Slides:** 9 e 10  
+**Objetivo:** consolidar tudo em uma entrega.
+
+Entrega mínima:
+
+- headline;
+- sobre;
+- prompt de foto;
+- prompt de banner;
+- post de apresentação;
+- próximo passo no LinkedIn.
 
 Para iniciantes:
 
-- rascunhar no papel ou Docs;
-- criar apenas headline, sobre e ideia de post.
+- rascunhar tudo no exercício individual.
 
 Para intermediários:
 
-- criar banner/post real no Canva;
-- revisar LinkedIn;
-- exportar imagem.
+- aplicar no LinkedIn real;
+- salvar banner/foto;
+- publicar ou deixar post pronto.
 
-## 20h50 - 20h58 | Apresentação
+## 20h52 - 20h58 | Apresentação
 
 **Slide:** 11  
-**Objetivo:** compartilhar e melhorar.
+**Objetivo:** gerar reflexão e feedback.
 
-Cada aluno apresenta:
+Cada aluno apresenta em 45 segundos:
 
-- quem é;
-- que área quer ocupar;
-- que visual escolheu;
-- que post criou;
-- como isso ajuda a marca pessoal.
+```text
+Minha marca pessoal quer comunicar:
+Minha headline ficou:
+Meu visual escolhido foi:
+Meu primeiro conteúdo será:
+Meu próximo passo no LinkedIn:
+```
 
-Feedback da turma:
+Feedback rápido:
 
 - ficou claro?
+- parece verdadeiro?
 - parece profissional?
-- o próximo passo está visível?
 
 ## 20h58 - 21h00 | Fechamento
 
 **Slide:** 12  
-**Objetivo:** consolidar.
+**Objetivo:** fechar com visão empreendedora.
 
 Fala sugerida:
 
-> Criar imagem não é parecer maior do que é. É comunicar melhor o que você sabe, faz e quer construir. Isso pode virar emprego, cliente, parceria ou serviço.
+> Configurar perfil, foto, banner e post pode virar oportunidade para vocês e também serviço para outras pessoas: pequenos negócios, profissionais autônomos e marcas locais precisam disso.
 
 Gancho:
 
-> Na próxima aula, podemos transformar esse kit em portfólio, página de serviço ou oferta para pequenos negócios.
+> O próximo passo é transformar presença digital em portfólio, página de serviço ou oferta.

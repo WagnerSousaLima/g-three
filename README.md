@@ -10,7 +10,7 @@ Material da Aula 3 do curso Informática 5.0.
 
 ## Ideia central
 
-A aula conecta criação digital, marca pessoal, IA visual, Canva, LinkedIn e redes sociais.
+A aula conecta marca pessoal, LinkedIn, Nano Banana/Gemini, GPT/Gemini e redes sociais.
 
 O foco é mostrar que imagem profissional não é vaidade: é clareza, confiança e oportunidade.
 
@@ -22,7 +22,8 @@ Cada aluno cria ou rascunha um **Kit de Marca Pessoal na Internet** com:
 - headline para LinkedIn;
 - texto “sobre”;
 - ideia de foto e banner;
-- post ou carrossel no Canva;
+- post de apresentação;
+- prompt de foto e banner com Nano Banana/Gemini;
 - pitch de 45 segundos.
 
 ## Como usar
