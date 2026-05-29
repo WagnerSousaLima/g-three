@@ -1,148 +1,241 @@
-# Exercício individual - Kit de Marca Pessoal com LinkedIn e IA
+# Exercicio individual - Perfil profissional com LinkedIn e IA
 
-## Missão
+## Missao
 
-Configurar ou rascunhar uma presença profissional usando:
+Criar ou rascunhar uma presenca profissional clara usando LinkedIn, GPT/Gemini e Nano Banana/Gemini.
 
-- LinkedIn;
-- GPT ou Gemini para texto;
-- Nano Banana/Gemini para foto e banner;
-- um post ou destaque profissional.
+Voce pode fazer de duas formas:
 
-## Parte 1 - Posicionamento
+- **com LinkedIn aberto:** aplicar os campos diretamente no perfil;
+- **sem LinkedIn ou sem publicar:** preencher tudo neste documento para usar depois.
+
+## Links da aula
+
+- LinkedIn: https://www.linkedin.com/
+- Gemini: https://gemini.google.com/
+- ChatGPT: https://chatgpt.com/
+- Ajuda do LinkedIn para editar perfil: https://www.linkedin.com/help/linkedin/answer/a546603/editing-your-profile
+- Ajuda do LinkedIn para URL publica: https://www.linkedin.com/help/linkedin/answer/a542685/manage-your-privacy-settings-on-linkedin?lang=en
+- Ajuda do Gemini para imagens: https://support.google.com/gemini/answer/14286560
+
+## Parte 1 - Diagnostico pessoal
 
 Preencha antes de usar IA:
 
 ```text
-Minha área/interesse:
-Quero ser lembrado por:
-Posso ajudar pessoas com:
-Tenho como prova:
-Meu público principal:
+Minha area/interesse:
+Minha habilidade atual:
+Meu publico principal:
+Minha prova atual:
+Meu proximo passo desejado:
 ```
 
-## Parte 2 - LinkedIn
+Exemplos de prova:
 
-Abra seu LinkedIn e verifique:
+- projeto feito em aula;
+- certificado;
+- antes/depois;
+- documento criado;
+- atendimento realizado;
+- portfolio;
+- post explicando aprendizado.
 
-- foto;
-- banner;
-- headline;
-- sobre;
-- experiência;
-- competências;
-- destaques;
-- contato.
+## Parte 2 - Frase-base
 
-Se não tiver LinkedIn, rascunhe tudo neste exercício para criar depois.
+Complete:
 
-## Parte 3 - GPT/Gemini para headline e sobre
+```text
+Eu estudo/atuo com ______________________
+para ajudar ______________________
+a conseguir ______________________.
+```
 
-Use este prompt:
+Exemplo:
+
+```text
+Eu estudo tecnologia e ferramentas digitais
+para ajudar pequenos negocios locais
+a organizar atendimento, documentos e presenca online.
+```
+
+## Parte 3 - Abrir o LinkedIn e localizar campos
+
+Passo a passo:
+
+1. Entre em https://www.linkedin.com/.
+2. Clique em **Eu**.
+3. Clique em **Ver perfil**.
+4. Localize foto, banner e headline na introducao do perfil.
+5. Role ate a secao **Sobre**.
+6. Localize **Perfil publico e URL** no lado direito da tela.
+
+Se estiver no celular:
+
+1. Toque na foto do perfil.
+2. Toque novamente para abrir o perfil.
+3. Use os icones de lapis para editar cada secao.
+
+## Parte 4 - Foto, banner e URL
+
+### Foto
+
+Checklist:
+
+- rosto visivel;
+- boa luz;
+- fundo simples;
+- aparencia natural;
+- sem excesso de filtro;
+- parece voce de verdade.
+
+### Banner
+
+Checklist:
+
+- comunica area ou objetivo;
+- visual limpo;
+- sem texto pequeno;
+- sem excesso de elementos;
+- combina com a headline.
+
+### URL publica
+
+Modelo desejado:
+
+```text
+linkedin.com/in/seu-nome
+```
+
+Anote sua URL atual ou a URL que pretende usar:
+
+```text
+Minha URL:
+```
+
+## Parte 5 - Prompt para GPT/Gemini
+
+Use:
 
 ```text
 Estou configurando meu LinkedIn.
-Minha área/interesse é: [área].
-Quero ser lembrado por: [habilidade ou objetivo].
-Tenho experiência/prova em: [prova].
-Meu público é: [empregador, cliente ou comunidade].
+Minha area/interesse e: [area].
+Minha habilidade atual e: [habilidade real].
+Minha prova e: [curso, projeto, atendimento, certificado ou experiencia].
+Meu publico e: [empregador, cliente, comunidade ou nicho].
+Meu proximo passo desejado e: [entrevista, estagio, servico, parceria, portfolio].
 
 Crie:
-1. três opções de headline;
-2. um texto "sobre" com até 5 linhas;
-3. um post de apresentação profissional;
-4. uma sugestão de destaque para meu perfil.
+1. 3 headlines curtas para LinkedIn;
+2. um texto Sobre com ate 5 linhas;
+3. um post de apresentacao profissional;
+4. uma versao mais simples, para aluno iniciante.
 
-Critério: linguagem simples, profissional e verdadeira.
-Não invente experiências.
+Regras: nao invente experiencia, nao exagere resultados e use linguagem natural.
 ```
 
-Depois, revise:
+Depois use:
 
 ```text
-Deixe a versão mais natural, menos exagerada e mais parecida com alguém em início de carreira.
+Revise a melhor versao.
+Deixe menos exagerada, mais natural e mais parecida com alguem em inicio de carreira.
 ```
 
-## Parte 4 - Nano Banana/Gemini para foto
+## Parte 6 - Escolha final
 
-Prompt para melhorar foto:
+Cole aqui:
+
+```text
+Headline escolhida:
+
+Texto Sobre:
+
+Post de apresentacao:
+```
+
+## Parte 7 - Prompt para foto profissional
+
+Se a ferramenta de imagem estiver disponivel e voce puder usar imagem propria com seguranca:
 
 ```text
 Melhore esta foto para uso profissional no LinkedIn.
-Mantenha meu rosto reconhecível.
-Melhore iluminação, fundo e enquadramento.
-Estilo: natural, profissional, confiável, sem exagero.
-Não altere minha identidade.
+Mantenha meu rosto reconhecivel e natural.
+Melhore luz, fundo e enquadramento.
+Nao altere minha identidade.
+Estilo: profissional, simples, confiavel, sem exagero.
 ```
 
-Checklist da foto:
+Se nao puder usar imagem propria, escreva apenas o prompt e acompanhe a demonstracao.
 
-- rosto visível;
-- boa luz;
-- fundo limpo;
-- aparência natural;
-- sem excesso de filtro.
-
-## Parte 5 - Nano Banana/Gemini para banner
-
-Prompt para banner:
+## Parte 8 - Prompt para banner
 
 ```text
 Crie um banner horizontal para LinkedIn.
-Área: [área].
+Area: [area].
 Mensagem curta: [frase].
-Estilo: limpo, moderno, profissional.
+Estilo: limpo, moderno e profissional.
 Cores: [cores].
-Deixe espaço livre para texto.
-Evite excesso de elementos.
+Deixe espaco livre para leitura.
+Evite texto pequeno e excesso de elementos.
 ```
 
 Ideias de mensagem:
 
-- Tecnologia aplicada para pequenos negócios.
-- Organização digital e atendimento profissional.
-- Aprendendo tecnologia para criar soluções reais.
-- Comunicação, imagem e ferramentas digitais.
+- Tecnologia aplicada para pequenos negocios.
+- Aprendendo tecnologia para criar solucoes reais.
+- Organizacao digital e atendimento profissional.
+- Comunicacao, imagem e ferramentas digitais.
+- Dados, documentos e processos com mais clareza.
 
-## Parte 6 - Aplicar ou rascunhar
-
-Entrega mínima:
-
-1. headline escolhida;
-2. texto sobre;
-3. prompt de foto;
-4. prompt de banner;
-5. post de apresentação;
-6. próximo passo no LinkedIn.
-
-## Post de apresentação
+## Parte 9 - Post de prova de valor
 
 Modelo:
 
 ```text
-Estou desenvolvendo minha presença profissional na internet.
-Tenho estudado [tema/área] e quero atuar com [objetivo].
-Nesta etapa, estou aprendendo a usar [ferramentas] para criar soluções mais profissionais.
-Meu próximo passo é [ação].
+Estou construindo minha presenca profissional na internet.
+Tenho estudado [tema] e estou desenvolvendo [habilidade].
+Nesta aula, organizei meu LinkedIn para comunicar [objetivo].
+Meu proximo passo e [acao].
 ```
 
-## Apresentação final
-
-Fale em 45 segundos:
+Melhore com uma prova:
 
 ```text
-Minha marca pessoal quer comunicar:
-Minha headline ficou:
-Meu visual escolhido foi:
-Meu primeiro conteúdo será:
-Meu próximo passo no LinkedIn:
+O que fiz:
+O que aprendi:
+Onde posso aplicar:
+Que oportunidade busco:
 ```
 
-## Checklist
+## Parte 10 - Entrega final
 
-- Minha headline é clara.
-- Meu sobre é verdadeiro e curto.
-- Minha foto parece profissional sem parecer artificial.
-- Meu banner comunica área ou objetivo.
-- Meu post mostra aprendizado, prova ou intenção.
-- Meu perfil tem próximo passo.
+Marque:
+
+- [ ] Diagnostico pessoal preenchido.
+- [ ] Headline escolhida.
+- [ ] Texto Sobre revisado.
+- [ ] Foto definida ou prompt pronto.
+- [ ] Banner definido ou prompt pronto.
+- [ ] URL publica localizada ou planejada.
+- [ ] Post de apresentacao escrito.
+- [ ] Pitch de 45 segundos preparado.
+
+## Pitch de 45 segundos
+
+Preencha:
+
+```text
+Minha area e:
+Minha headline ficou:
+Meu Sobre comunica:
+Meu visual passa:
+Minha prova de valor sera:
+Meu proximo passo e:
+```
+
+## Criterios de qualidade
+
+- **Clareza:** uma pessoa entende sua area e objetivo rapidamente.
+- **Verdade:** a IA nao inventou experiencia.
+- **Profissionalismo:** foto e banner ajudam, nao distraem.
+- **Prova:** existe algum projeto, post, certificado ou portfolio.
+- **Acao:** existe URL, contato ou proximo passo.

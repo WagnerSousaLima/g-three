@@ -1,29 +1,30 @@
-# Aula 3 - Marca Pessoal, Imagem e Redes Sociais Para Negócios
+# Aula 3 - LinkedIn, Marca Pessoal e IA Para Oportunidades
 
-Material da Aula 3 do curso Informática 5.0.
+Material da Aula 3 do curso Informatica 5.0.
 
 ## Arquivos
 
-- `index.html`: slides para apresentação.
-- `flow-da-aula.md`: roteiro do professor.
-- `exercicio-individual.md`: atividade prática individual.
+- `index.html`: slides navegaveis para apresentacao.
+- `flow-da-aula.md`: roteiro do professor com tempo, passos e links.
+- `exercicio-individual.md`: atividade pratica individual.
 
 ## Ideia central
 
-A aula conecta marca pessoal, LinkedIn, Nano Banana/Gemini, GPT/Gemini e redes sociais.
+A aula ensina o aluno a configurar ou rascunhar uma presenca profissional com peso pedagogico: diagnostico pessoal, campos reais do LinkedIn, texto com GPT/Gemini, imagem com Nano Banana/Gemini e prova de valor.
 
-O foco é mostrar que imagem profissional não é vaidade: é clareza, confiança e oportunidade.
+O foco nao e apenas "fazer um perfil bonito". O foco e aprender como tecnologia, comunicacao e criterio profissional criam oportunidade de estudo, trabalho e servico digital.
 
 ## Produto da aula
 
-Cada aluno cria ou rascunha um **Kit de Marca Pessoal na Internet** com:
+Cada aluno cria ou rascunha:
 
-- posicionamento;
+- diagnostico de posicionamento;
 - headline para LinkedIn;
-- texto “sobre”;
-- ideia de foto e banner;
-- post de apresentação;
-- prompt de foto e banner com Nano Banana/Gemini;
+- texto Sobre com ate 5 linhas;
+- foto profissional ou prompt de melhoria;
+- banner ou prompt de banner;
+- URL publica localizada ou planejada;
+- post de apresentacao ou prova de valor;
 - pitch de 45 segundos.
 
 ## Como usar
@@ -32,7 +33,7 @@ Abra `index.html` no navegador.
 
 Controles:
 
-- Seta direita: próximo slide.
+- Seta direita: proximo slide.
 - Seta esquerda: slide anterior.
 - `F`: tela cheia.
 - `P`: imprimir ou salvar em PDF.

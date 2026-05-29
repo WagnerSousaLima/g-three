@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aula 3 | Marca Pessoal e Criação Digital</title>
+  <title>Aula 3 | LinkedIn, Marca Pessoal e IA</title>
   <style>
     :root {
       --bg: #f5f1e8;
@@ -35,6 +35,8 @@
       background-size: 32px 32px;
       font-family: Inter, "Segoe UI", Arial, sans-serif;
     }
+    a { color: var(--blue); font-weight: 900; text-decoration: none; overflow-wrap: anywhere; }
+    a:hover { text-decoration: underline; }
     .deck { width: 100vw; height: 100vh; position: relative; }
     .slide {
       display: none;
@@ -58,22 +60,22 @@
     h1, h2, h3, p { margin: 0; }
     h1 {
       max-width: 1080px;
-      font-size: 4.45rem;
-      line-height: .96;
+      font-size: 4.05rem;
+      line-height: .98;
       letter-spacing: 0;
       overflow-wrap: anywhere;
     }
     h2 {
-      max-width: 1000px;
-      font-size: 3rem;
+      max-width: 1040px;
+      font-size: 2.82rem;
       line-height: 1.04;
       letter-spacing: 0;
       overflow-wrap: anywhere;
     }
     .subtitle {
-      max-width: 900px;
+      max-width: 940px;
       color: #354257;
-      font-size: 1.14rem;
+      font-size: 1.12rem;
       line-height: 1.34;
       margin-top: .78rem;
     }
@@ -100,18 +102,19 @@
     .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem; }
     .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .grid.wide-left { grid-template-columns: 1.1fr .9fr; }
+    .grid.wide-left { grid-template-columns: 1.08fr .92fr; }
     .flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .72rem; }
-    .card, .panel, .screen, .lab {
+    .card, .panel, .lab, .step-box {
       border: 1px solid var(--line);
       border-radius: 8px;
       background: rgba(255, 253, 247, .96);
       box-shadow: 0 12px 30px rgba(16, 24, 39, .08);
       overflow: hidden;
     }
-    .card { min-height: 126px; padding: .95rem; }
-    .panel { padding: 1.05rem; min-height: 100%; }
+    .card { min-height: 124px; padding: .95rem; }
+    .panel { padding: 1rem; min-height: 100%; }
     .lab { padding: 1rem; background: #fffaf0; border-color: #d8bd85; }
+    .step-box { padding: 1rem; }
     .mint { background: var(--mint); border-color: #b8d9cd; }
     .sky { background: var(--sky); border-color: #c0d2f1; }
     .sun { background: var(--sun); border-color: #e8ca92; }
@@ -121,10 +124,9 @@
     .dark strong { color: #fff; }
     .dark p, .dark li { color: #d7dee9; }
     strong { display: block; color: #132033; font-size: 1.02rem; margin-bottom: .42rem; }
-    .dark strong { color: #fff; }
-    .card p, .panel p, .lab p, li { color: #465466; font-size: .94rem; line-height: 1.32; }
+    .card p, .panel p, .lab p, li { color: #465466; font-size: .93rem; line-height: 1.32; }
     ul, ol { margin: .56rem 0 0; padding-left: 1.08rem; }
-    li + li { margin-top: .3rem; }
+    li + li { margin-top: .28rem; }
     .number { color: var(--green); font-size: 2.05rem; font-weight: 950; line-height: .95; margin-bottom: .58rem; }
     .pill {
       display: inline-flex;
@@ -132,15 +134,15 @@
       border-radius: 999px;
       background: rgba(255, 253, 247, .96);
       color: #213044;
-      font-size: .82rem;
+      font-size: .78rem;
       font-weight: 900;
       padding: .34rem .55rem;
       margin: .1rem .08rem .1rem 0;
     }
     .profile {
       display: grid;
-      grid-template-rows: 120px 1fr;
-      min-height: 360px;
+      grid-template-rows: 112px 1fr;
+      min-height: 356px;
       border: 1px solid var(--line);
       border-radius: 8px;
       overflow: hidden;
@@ -149,7 +151,7 @@
     }
     .cover {
       background:
-        linear-gradient(135deg, rgba(34,88,183,.16), rgba(0,107,91,.18)),
+        linear-gradient(135deg, rgba(34,88,183,.18), rgba(0,107,91,.18)),
         repeating-linear-gradient(90deg, rgba(17,24,39,.08) 0 1px, transparent 1px 28px);
       border-bottom: 1px solid var(--line);
     }
@@ -166,28 +168,29 @@
     .profile-line { height: 10px; border-radius: 999px; background: #e1d8c8; margin: .4rem 0; }
     .profile-line.short { width: 48%; }
     .profile-line.mid { width: 68%; }
-    .mock-post {
-      min-height: 300px;
+    .table { display: grid; gap: .52rem; }
+    .row {
       display: grid;
-      grid-template-rows: 58px 1fr 54px;
+      grid-template-columns: .72fr 1.28fr;
+      gap: .65rem;
+      align-items: start;
+      padding: .7rem;
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: var(--paper);
-      overflow: hidden;
+      background: rgba(255,253,247,.96);
     }
-    .post-head, .post-foot { padding: .78rem; border-bottom: 1px solid var(--line); }
-    .post-foot { border-bottom: 0; border-top: 1px solid var(--line); color: var(--muted); }
-    .post-visual {
-      display: grid;
-      place-items: center;
-      color: #fff;
-      font-size: 2rem;
-      font-weight: 950;
-      background:
-        linear-gradient(135deg, #111827 0%, #2258b7 55%, #006b5b 100%);
-    }
+    .row strong { margin: 0; }
+    .row p { color: #465466; font-size: .92rem; line-height: 1.32; }
     code { font-family: Consolas, "Courier New", monospace; color: #132033; }
-    .lab code { display: block; white-space: pre-wrap; font-size: .9rem; line-height: 1.33; overflow-wrap: anywhere; }
+    .lab code { display: block; white-space: pre-wrap; font-size: .86rem; line-height: 1.31; overflow-wrap: anywhere; }
+    .link-list { display: grid; gap: .62rem; }
+    .link-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 253, 247, .96);
+      padding: .82rem;
+    }
+    .link-item span { display: block; color: var(--muted); font-size: .86rem; margin-top: .22rem; }
     .mini-footer {
       display: flex;
       justify-content: space-between;
@@ -220,8 +223,8 @@
       h1 { font-size: 2.12rem; line-height: 1.02; }
       h2 { font-size: 1.52rem; line-height: 1.1; }
       .subtitle { font-size: 1rem; }
-      .grid, .grid.two, .grid.four, .grid.wide-left, .flow { grid-template-columns: 1fr; }
-      .slide > *, .card, .panel, .lab, .content, .screen { min-width: 0; max-width: 100%; }
+      .grid, .grid.two, .grid.four, .grid.wide-left, .flow, .row { grid-template-columns: 1fr; }
+      .slide > *, .card, .panel, .lab, .content { min-width: 0; max-width: 100%; }
       .nav { display: none; }
     }
     @media (max-width: 520px) {
@@ -229,7 +232,7 @@
       h1 { font-size: 1.86rem; }
       h2 { font-size: 1.28rem; }
       .card p, .panel p, .lab p, li { font-size: .88rem; }
-      .lab code { font-size: .78rem; }
+      .lab code { font-size: .76rem; }
       .progress { width: 70px; }
     }
   </style>
@@ -240,42 +243,26 @@
       <header>
         <div>
           <div class="eyebrow">Informática 5.0 | Aula 3</div>
-          <h1>Marca Pessoal, Imagem e Redes Sociais Para Negócios</h1>
-          <p class="subtitle">Oficina prática com LinkedIn, Nano Banana, Gemini e GPT para transformar presença na internet em oportunidade real.</p>
+          <h1>LinkedIn, Marca Pessoal e IA Para Oportunidades</h1>
+          <p class="subtitle">Em 2 horas, você vai configurar ou rascunhar um perfil profissional com método: posicionamento, campos reais do LinkedIn, texto com GPT/Gemini e imagem com Nano Banana.</p>
         </div>
         <div class="badge">19h às 21h</div>
       </header>
       <div class="content grid">
-        <div class="card rose"><strong>Ponte da Aula 2</strong><p>Ferramentas digitais viram valor quando organizam uma entrega clara.</p></div>
-        <div class="card mint"><strong>Marca pessoal</strong><p>Como ser encontrado, lembrado e entendido na internet.</p></div>
-        <div class="card sky"><strong>Criação com IA</strong><p>Foto, banner, headline, sobre e conteúdo com Nano Banana, Gemini e GPT.</p></div>
+        <div class="card mint"><strong>Entrega da aula</strong><p>Headline, sobre, foto/banner, URL pública e post de apresentação.</p></div>
+        <div class="card sky"><strong>Ferramentas</strong><p>LinkedIn, Gemini/Nano Banana, ChatGPT e um documento de rascunho.</p></div>
+        <div class="card sun"><strong>Critério</strong><p>O perfil precisa ser claro, verdadeiro, profissional e fácil de compartilhar.</p></div>
       </div>
-      <footer class="mini-footer"><span>Hoje a entrega é um kit de presença digital profissional</span><span></span></footer>
+      <footer class="mini-footer"><span>Objetivo: presença digital que abre conversa de trabalho, estudo ou serviço</span><span></span></footer>
     </section>
 
     <section class="slide">
       <header>
         <div>
-          <div class="eyebrow">Conceito central</div>
-          <h2>Marca pessoal é a lembrança que a internet constrói sobre você</h2>
+          <div class="eyebrow">Por que isso importa</div>
+          <h2>Oportunidade começa quando alguém entende seu valor rápido</h2>
         </div>
-        <div class="badge">Posicionamento</div>
-      </header>
-      <div class="content grid">
-        <div class="card mint"><strong>Quem você ajuda?</strong><p>Público, nicho, comunidade, mercado ou tipo de cliente.</p></div>
-        <div class="card sky"><strong>Com o quê?</strong><p>Habilidade, serviço, conhecimento, solução ou transformação.</p></div>
-        <div class="card sun"><strong>Com que prova?</strong><p>Projetos, posts, antes/depois, depoimentos, currículo ou portfólio.</p></div>
-      </div>
-      <footer class="mini-footer"><span>Ser visto é bom. Ser entendido é melhor.</span><span></span></footer>
-    </section>
-
-    <section class="slide">
-      <header>
-        <div>
-          <div class="eyebrow">Mapa da presença digital</div>
-          <h2>Seu perfil precisa responder em poucos segundos</h2>
-        </div>
-        <div class="badge">Clareza</div>
+        <div class="badge">Contexto</div>
       </header>
       <div class="content grid wide-left">
         <div class="profile">
@@ -289,179 +276,175 @@
           </div>
         </div>
         <div class="panel">
-          <strong>Checklist de leitura rápida</strong>
+          <strong>Leitura em 15 segundos</strong>
           <ul>
             <li>Quem é essa pessoa?</li>
-            <li>O que ela faz ou quer fazer?</li>
-            <li>Por que alguém deveria confiar?</li>
-            <li>Qual é o próximo passo?</li>
+            <li>O que ela sabe ou quer construir?</li>
+            <li>Que prova mostra seriedade?</li>
+            <li>Como posso conversar, contratar ou indicar?</li>
           </ul>
         </div>
       </div>
-      <footer class="mini-footer"><span>Perfil profissional é página de apresentação, não álbum pessoal</span><span></span></footer>
+      <footer class="mini-footer"><span>Marca pessoal não é personagem: é clareza pública sobre uma trajetória real</span><span></span></footer>
     </section>
 
     <section class="slide">
       <header>
         <div>
-          <div class="eyebrow">LinkedIn na prática</div>
-          <h2>Configuração mínima para parecer profissional</h2>
+          <div class="eyebrow">Diagnóstico antes da IA</div>
+          <h2>Sem resposta humana, a IA só produz frase bonita</h2>
         </div>
-        <div class="badge">Perfil</div>
-      </header>
-      <div class="content flow">
-        <div class="card mint"><strong>Foto</strong><p>Rosto nítido, boa luz, fundo simples e expressão natural.</p></div>
-        <div class="card sky"><strong>Banner</strong><p>Área visual com promessa, área de atuação ou palavra-chave.</p></div>
-        <div class="card sun"><strong>Headline</strong><p>Não só cargo: habilidade, objetivo e área de valor.</p></div>
-        <div class="card rose"><strong>Sobre</strong><p>Texto curto: trajetória, interesse, habilidades e convite.</p></div>
-        <div class="card lilac"><strong>Destaques</strong><p>Projetos, posts, portfólio, certificado ou apresentação.</p></div>
-      </div>
-      <footer class="mini-footer"><span>O perfil bom reduz dúvida e aumenta oportunidade</span><span></span></footer>
-    </section>
-
-    <section class="slide">
-      <header>
-        <div>
-          <div class="eyebrow">IA visual</div>
-          <h2>Foto e banner: usar IA sem perder autenticidade</h2>
-        </div>
-        <div class="badge">Nano Banana</div>
+        <div class="badge">Base</div>
       </header>
       <div class="content grid">
-        <div class="card mint"><strong>Foto profissional</strong><p>IA pode melhorar luz, fundo e enquadramento. O rosto precisa continuar reconhecível.</p></div>
-        <div class="card sky"><strong>Banner</strong><p>Use IA visual para criar fundos, composição, textura e cenário ligado ao seu nicho.</p></div>
-        <div class="card sun"><strong>Cuidados</strong><p>Evite exagero, rosto artificial, texto ilegível, promessa falsa e imagem que pareça fantasia.</p></div>
+        <div class="card mint"><strong>1. Área</strong><p>Em que área quero aprender, trabalhar ou prestar serviço?</p></div>
+        <div class="card sky"><strong>2. Habilidade</strong><p>Que tarefa consigo fazer ou estou desenvolvendo agora?</p></div>
+        <div class="card sun"><strong>3. Público</strong><p>Empregador, cliente local, comunidade, escola, negócio familiar ou projeto próprio.</p></div>
+        <div class="card rose"><strong>4. Prova</strong><p>Curso, projeto, certificado, antes/depois, atendimento, portfólio ou publicação.</p></div>
+        <div class="card lilac"><strong>5. Próximo passo</strong><p>Ser chamado para conversa, estágio, serviço, parceria, mentoria ou entrevista.</p></div>
+        <div class="card dark"><strong>Frase-base</strong><p>Eu estudo/atuo com [área] para ajudar [público] a alcançar [resultado].</p></div>
       </div>
-      <footer class="mini-footer"><span>Nano Banana ou ferramenta equivalente: bom para edição guiada por texto e consistência visual</span><span></span></footer>
+      <footer class="mini-footer"><span>A pergunta correta vem antes do prompt correto</span><span></span></footer>
     </section>
 
     <section class="slide">
       <header>
         <div>
-          <div class="eyebrow">Gemini + GPT na prática</div>
-          <h2>Texto e imagem precisam contar a mesma história</h2>
+          <div class="eyebrow">LinkedIn real | Entrada e campos</div>
+          <h2>Abra o perfil e localize os pontos que serão editados</h2>
         </div>
-        <div class="badge">Copilotos</div>
+        <div class="badge">Plataforma</div>
+      </header>
+      <div class="content table">
+        <div class="row"><strong>Acessar</strong><p>Entre em <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">linkedin.com</a>. No topo, clique em <b>Eu</b> e depois em <b>Ver perfil</b>.</p></div>
+        <div class="row"><strong>Editar perfil</strong><p>Use o ícone de lápis na seção desejada, altere os campos e clique em <b>Salvar</b>.</p></div>
+        <div class="row"><strong>Campos da aula</strong><p>Foto, banner, headline, seção Sobre, URL pública, experiências/competências e destaque.</p></div>
+        <div class="row"><strong>Se não tiver conta</strong><p>Rascunhe tudo no exercício. A aula continua valendo porque o método vem antes da publicação.</p></div>
+      </div>
+      <footer class="mini-footer"><span>Referência: Ajuda do LinkedIn sobre edição de perfil</span><span></span></footer>
+    </section>
+
+    <section class="slide">
+      <header>
+        <div>
+          <div class="eyebrow">LinkedIn real | Foto, banner e URL</div>
+          <h2>Três ajustes que mudam a primeira impressão</h2>
+        </div>
+        <div class="badge">Passo a passo</div>
       </header>
       <div class="content grid">
-        <div class="card mint"><strong>GPT para clareza</strong><p>Transforma trajetória, habilidade e objetivo em headline, sobre e post.</p></div>
-        <div class="card sky"><strong>Gemini para contexto</strong><p>Ajuda a comparar perfis, gerar ideias de banner e adaptar linguagem ao mercado.</p></div>
-        <div class="card sun"><strong>Nano Banana para visual</strong><p>Edita foto, melhora fundo, cria banner e mantém consistência entre imagem e área.</p></div>
+        <div class="card mint"><strong>Foto</strong><p><b>Ver perfil</b> → câmera na introdução → enviar foto → cortar/ajustar → definir visibilidade → salvar.</p></div>
+        <div class="card sky"><strong>Banner</strong><p><b>Ver perfil</b> → câmera no canto superior direito da introdução → enviar imagem → ajustar → salvar.</p></div>
+        <div class="card sun"><strong>URL pública</strong><p><b>Ver perfil</b> → <b>Perfil público e URL</b> → editar URL personalizada → usar variação do nome.</p></div>
       </div>
-      <footer class="mini-footer"><span>A marca fica mais forte quando texto e imagem apontam para a mesma direção</span><span></span></footer>
+      <footer class="mini-footer"><span>Foto deve parecer a pessoa real. Banner deve comunicar área, não decorar por decorar.</span><span></span></footer>
     </section>
 
     <section class="slide">
       <header>
         <div>
-          <div class="eyebrow">Conteúdo para redes</div>
-          <h2>Post bom tem função, não só aparência</h2>
+          <div class="eyebrow">LinkedIn real | Headline e Sobre</div>
+          <h2>O texto precisa dizer o que você faz, busca e prova</h2>
         </div>
-        <div class="badge">Estratégia</div>
+        <div class="badge">Escrita</div>
       </header>
-      <div class="content grid four">
-        <div class="card mint"><strong>Ensinar</strong><p>Dica, tutorial, passo a passo, erro comum.</p></div>
-        <div class="card sky"><strong>Provar</strong><p>Antes/depois, bastidor, resultado, depoimento.</p></div>
-        <div class="card sun"><strong>Conectar</strong><p>História curta, opinião, aprendizado, desafio.</p></div>
-        <div class="card rose"><strong>Converter</strong><p>Convite, agenda, formulário, contato, serviço.</p></div>
+      <div class="content grid">
+        <div class="card mint"><strong>Headline</strong><p>Ícone de lápis na introdução → campo <b>Headline</b> → salvar. Evite só “estudante”. Mostre área + habilidade + direção.</p></div>
+        <div class="card sky"><strong>Sobre</strong><p>Role até <b>Sobre</b> → lápis → escreva missão, aprendizado, habilidade, prova e convite → salvar.</p></div>
+        <div class="card sun"><strong>Modelo</strong><p>Estudo [área] e estou desenvolvendo [habilidade]. Quero atuar com [objetivo]. Já pratiquei [prova]. Aberto a [próximo passo].</p></div>
       </div>
-      <footer class="mini-footer"><span>Marca pessoal cresce quando conteúdo mostra valor de forma repetida</span><span></span></footer>
+      <footer class="mini-footer"><span>Headline é promessa curta. Sobre é contexto com verdade.</span><span></span></footer>
     </section>
 
     <section class="slide">
       <header>
         <div>
-          <div class="eyebrow">LinkedIn em sala</div>
-          <h2>Configuração guiada: do perfil vazio ao perfil compreensível</h2>
+          <div class="eyebrow">GPT/Gemini | Prompt com intenção</div>
+          <h2>A IA deve organizar seu raciocínio, não inventar sua carreira</h2>
         </div>
-        <div class="badge">Oficina</div>
-      </header>
-      <div class="content flow">
-        <div class="card mint"><strong>1. Abrir perfil</strong><p>Entrar no LinkedIn, conferir foto, banner, URL e modo de edição.</p></div>
-        <div class="card sky"><strong>2. Ajustar headline</strong><p>Usar GPT/Gemini para criar 2 versões e escolher a mais verdadeira.</p></div>
-        <div class="card sun"><strong>3. Escrever sobre</strong><p>Texto curto: área, aprendizado, objetivo, habilidades e convite.</p></div>
-        <div class="card rose"><strong>4. Criar visual</strong><p>Foto e banner com Nano Banana ou Gemini, sem perder naturalidade.</p></div>
-        <div class="card lilac"><strong>5. Publicar prova</strong><p>Post simples, projeto, certificado, apresentação ou destaque.</p></div>
-      </div>
-      <footer class="mini-footer"><span>O perfil melhora quando cada campo tem uma função clara</span><span></span></footer>
-    </section>
-
-    <section class="slide">
-      <header>
-        <div>
-          <div class="eyebrow">Projeto da aula</div>
-          <h2>Kit de Marca Pessoal na Internet</h2>
-          <p class="subtitle">Configurar o LinkedIn em sala e criar os elementos principais com IA textual e visual.</p>
-        </div>
-        <div class="badge">Mão na massa</div>
-      </header>
-      <div class="content flow">
-        <div class="card mint"><strong>1. Posicionamento</strong><p>Quem sou, o que faço, quem ajudo e qual oportunidade busco.</p></div>
-        <div class="card sky"><strong>2. GPT/Gemini</strong><p>Criar headline, sobre curto e post de apresentação.</p></div>
-        <div class="card sun"><strong>3. Nano Banana</strong><p>Planejar ou gerar foto profissional e banner do perfil.</p></div>
-        <div class="card rose"><strong>4. LinkedIn</strong><p>Aplicar no perfil: foto, banner, headline, sobre e destaque.</p></div>
-        <div class="card lilac"><strong>5. Pitch</strong><p>Mostrar perfil, explicar escolhas e próximo passo.</p></div>
-      </div>
-      <footer class="mini-footer"><span>Projeto pequeno, mas com cara de presença digital real</span><span></span></footer>
-    </section>
-
-    <section class="slide">
-      <header>
-        <div>
-          <div class="eyebrow">Prompt de apoio</div>
-          <h2>Use GPT/Gemini para escrever e Nano Banana para visualizar</h2>
-        </div>
-        <div class="badge">IA</div>
+        <div class="badge">Texto</div>
       </header>
       <div class="content lab">
-        <code>Estou construindo minha marca pessoal na internet.
+        <code>Estou configurando meu LinkedIn.
 Minha área/interesse é: [área].
-Quero ser lembrado por: [habilidade, serviço ou objetivo].
+Minha habilidade atual é: [habilidade real].
+Minha prova é: [curso, projeto, atendimento, certificado ou experiência].
 Meu público é: [empregador, cliente, comunidade ou nicho].
+Meu próximo passo desejado é: [entrevista, estágio, serviço, parceria, portfólio].
 
 Crie:
-1. 3 opções de headline para LinkedIn;
-2. um texto "sobre" com até 5 linhas;
+1. 3 headlines curtas para LinkedIn;
+2. um texto Sobre com até 5 linhas;
 3. um post de apresentação profissional;
-4. um prompt para banner no Nano Banana;
-5. uma melhoria para deixar minha presença mais confiável.
+4. uma versão mais simples, para aluno iniciante.
 
-Critério: linguagem simples, profissional e verdadeira.</code>
+Regras: não invente experiência, não exagere resultados e use linguagem natural.</code>
       </div>
-      <footer class="mini-footer"><span>IA ajuda a dar forma. A verdade da marca vem da pessoa.</span><span></span></footer>
+      <footer class="mini-footer"><span>Depois da resposta: cortar exageros, trocar palavras que não parecem suas e salvar a melhor versão</span><span></span></footer>
     </section>
 
     <section class="slide">
       <header>
         <div>
-          <div class="eyebrow">Apresentação final</div>
-          <h2>Mostre sua presença digital em 45 segundos</h2>
+          <div class="eyebrow">Nano Banana/Gemini | Imagem com critério</div>
+          <h2>Imagem profissional é confiança visual, não fantasia</h2>
         </div>
-        <div class="badge">Pitch</div>
+        <div class="badge">Visual</div>
       </header>
       <div class="content grid">
-        <div class="card mint"><strong>Quem sou</strong><p>Área, interesse, habilidade ou objetivo profissional.</p></div>
-        <div class="card sky"><strong>Como apareço</strong><p>Foto, banner, headline e estilo visual escolhido.</p></div>
-        <div class="card sun"><strong>O que publico</strong><p>Post de apresentação, projeto, certificado ou conteúdo de prova.</p></div>
+        <div class="card mint"><strong>Ferramenta</strong><p>Acesse <a href="https://gemini.google.com/" target="_blank" rel="noreferrer">gemini.google.com</a>. Se imagem não estiver disponível para sua conta, rascunhe o prompt e acompanhe a demonstração.</p></div>
+        <div class="card sky"><strong>Foto</strong><p>Melhore luz, fundo e enquadramento. Mantenha rosto reconhecível e aparência natural.</p></div>
+        <div class="card sun"><strong>Banner</strong><p>Crie composição horizontal para LinkedIn com área, mensagem curta e espaço limpo para leitura.</p></div>
       </div>
-      <footer class="mini-footer"><span>Marca pessoal é clareza repetida com consistência</span><span></span></footer>
+      <footer class="mini-footer"><span>Use imagem própria com cuidado. Não publique foto de outra pessoa sem autorização.</span><span></span></footer>
     </section>
 
     <section class="slide">
       <header>
         <div>
-          <div class="eyebrow">Fechamento</div>
-          <h2>Criar imagem é criar confiança</h2>
-          <p class="subtitle">LinkedIn, Nano Banana, Gemini e GPT viram oportunidade quando ajudam uma pessoa a ser entendida, lembrada e procurada.</p>
+          <div class="eyebrow">Projeto da aula | Aplicação</div>
+          <h2>Publicar ou deixar pronto: perfil + prova de valor</h2>
         </div>
-        <div class="badge">21h00</div>
+        <div class="badge">Entrega</div>
       </header>
-      <div class="content grid">
-        <div class="card mint"><strong>Habilidade</strong><p>Edição, comunicação visual, texto, vídeo e apresentação.</p></div>
-        <div class="card sky"><strong>Serviço</strong><p>Perfil profissional, kit visual, posts, banners e conteúdo para negócios locais.</p></div>
-        <div class="card sun"><strong>Próximo passo</strong><p>Transformar esse kit em portfólio e oferta de serviço.</p></div>
+      <div class="content flow">
+        <div class="card mint"><strong>1. Diagnóstico</strong><p>Preencha área, habilidade, público, prova e próximo passo.</p></div>
+        <div class="card sky"><strong>2. LinkedIn</strong><p>Ajuste foto, banner, headline, sobre e URL pública.</p></div>
+        <div class="card sun"><strong>3. IA textual</strong><p>Use GPT/Gemini, revise e escolha uma versão verdadeira.</p></div>
+        <div class="card rose"><strong>4. IA visual</strong><p>Crie ou planeje foto e banner com prompt profissional.</p></div>
+        <div class="card lilac"><strong>5. Prova</strong><p>Escreva post sobre o que aprendeu e qual solução quer construir.</p></div>
       </div>
-      <footer class="mini-footer"><span>Informática 5.0: tecnologia, criatividade e empreendedorismo</span><span></span></footer>
+      <footer class="mini-footer"><span>A entrega não é “mexer no perfil”. É sair com uma presença profissional mais compreensível.</span><span></span></footer>
+    </section>
+
+    <section class="slide">
+      <header>
+        <div>
+          <div class="eyebrow">Links e critério de qualidade</div>
+          <h2>Use fontes oficiais e avalie o resultado antes de publicar</h2>
+        </div>
+        <div class="badge">Referências</div>
+      </header>
+      <div class="content grid wide-left">
+        <div class="link-list">
+          <div class="link-item"><a href="https://www.linkedin.com/help/linkedin/answer/a546603/editing-your-profile?lang=en" target="_blank" rel="noreferrer">Editar perfil no LinkedIn</a><span>Passos oficiais para alterar seções do perfil.</span></div>
+          <div class="link-item"><a href="https://www.linkedin.com/help/linkedin/answer/a568217/adding-or-changing-the-background-photo-on-your-profile?lang=en" target="_blank" rel="noreferrer">Adicionar banner no LinkedIn</a><span>Como alterar a imagem de capa do perfil.</span></div>
+          <div class="link-item"><a href="https://www.linkedin.com/help/linkedin/answer/a542685/manage-your-privacy-settings-on-linkedin?lang=en" target="_blank" rel="noreferrer">URL pública do LinkedIn</a><span>Como encontrar e personalizar o link do perfil.</span></div>
+          <div class="link-item"><a href="https://support.google.com/gemini/answer/14286560?hl=pt-BR" target="_blank" rel="noreferrer">Gerar e editar imagens no Gemini</a><span>Ajuda oficial para uso de imagens no Gemini.</span></div>
+          <div class="link-item"><a href="https://help.openai.com/en/articles/11084440-images-in-chatgpt" target="_blank" rel="noreferrer">Imagens no ChatGPT</a><span>Como criar ou editar imagens com ChatGPT, quando disponível.</span></div>
+        </div>
+        <div class="panel">
+          <strong>Rubrica final</strong>
+          <ul>
+            <li>Clareza: entendo área e objetivo.</li>
+            <li>Verdade: nada inventado pela IA.</li>
+            <li>Profissionalismo: foto e banner coerentes.</li>
+            <li>Prova: existe post, projeto, certificado ou portfólio.</li>
+            <li>Ação: existe URL ou próximo passo de contato.</li>
+          </ul>
+        </div>
+      </div>
+      <footer class="mini-footer"><span>Fechamento: tecnologia boa aumenta autonomia, repertório e oportunidade</span><span></span></footer>
     </section>
   </main>
   <div class="nav">
